@@ -1,0 +1,57 @@
+@import "../../../assets/scss/style";
+
+a {
+  color: $light-color;
+}
+
+header {
+  background: $primary-color;
+  color: $light-color;
+  border-bottom: $secondary-color 3px solid;
+  width: 100%;
+  overflow: hidden;
+
+  .header-container {
+    display: flex;
+    width: 90%;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+      li {
+        float: left;
+
+        a {
+          color: $light-color;
+          display: block;
+          text-align: center;
+          padding: 10px 16px;
+        }
+      }
+    }
+
+
+  }
+
+}
+
+
+@media screen and (max-width: 599px) {
+  header {
+    .header-container {
+      display: block;
+    }
+
+    .header-brand {
+      margin-left: 15px;
+    }
+  }
+
+}
+

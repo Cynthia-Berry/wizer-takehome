@@ -1,0 +1,36 @@
+<div class="card" style="width: 90%; height: 70%; margin: 80px auto">
+  <img src="assets/images/img/book-cover.jpg" alt="Avatar"
+       style="width:200px; height: 200px; margin: 0 auto; display: block">
+  <div class="container">
+
+    <h2>{{book?.name}}</h2>
+
+     <div *ngIf="state.isEdit">
+      <form [formGroup]="bookForm">
+        <div class="flex-row">
+          <div class="form-group">
+            <label>Book Name</label>
+            <input formControlName="name" type="text" class="form-control">
+          </div>
+           <div class="form-group">
+            <label>Image</label>
+            <input formControlName="imageUrl" type="text" class="form-control">
+          </div>
+          <div>
+            <button class="btn btn-primary" (click)="editBook()">Update</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div>{{book?.description}}</div>
+    <div>{{book?.imageUrl}}</div>
+    <div>{{book?.createdAt | date : 'medium'}}</div>
+
+    <div style="float: right">
+      <a class="me-5">Favorite</a>
+      <a style="margin: 0 40px" (click)="toggleEdit()">Edit</a>
+      <a (click)="deleteBook()">Delete</a>
+    </div>
+  </div>
+</div>

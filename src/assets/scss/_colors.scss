@@ -1,0 +1,45 @@
+/* PRIMARY COLORS */
+$primary-color: #264635;
+$primary-color-shade: darken($primary-color, 20%);
+$primary-color-contrast: lighten($primary-color, 5%);
+$primary-color-tint: lighten($primary-color, 10%);
+
+/* SECONDARY COLORS */
+$secondary-color: #2a9d85;
+$secondary-color-shade: darken($secondary-color, 20%);
+$secondary-color-contrast: lighten($secondary-color, 5%);
+$secondary-color-tint: lighten($secondary-color, 10%);
+
+/* WARNING COLORS */
+$warning-color: #e9c468;
+$warning-color-shade: darken($warning-color, 20%);
+$warning-color-contrat: lighten($warning-color, 5%);
+$warning-color-tint: lighten($warning-color, 10%);
+
+/* DANGER COLORS */
+$danger-color: #e76f51;
+$danger-color-shade: darken($danger-color, 20%);
+$danger-color-contrast: lighten($danger-color, 5%);
+$danger-color-tint: lighten($danger-color, 10%);
+
+/* MEDIUM COLORS */
+$medium-color: #F0F0F0FF;
+$medium-color-shade: darken($medium-color, 20%);
+$medium-color-contrast: lighten($medium-color, 5%);
+$medium-color-tint: lighten($medium-color, 10%);
+
+/* LIGHT COLORS */
+$light-color: #FeFeFe;
+$light-color-shade: darken($light-color, 5%);
+$light-color-contrast: lighten($medium-color, 5%);
+$light-color-tint: #ffffff;
+
+/* DARK COLORS */
+$dark-color: #1C1C1CFF;
+$dark-color-shade: darken($dark-color, 20%);
+$dark-color-contrast: lighten($dark-color, 5%);
+$dark-color-tint: #393E46;
+
+
+
+

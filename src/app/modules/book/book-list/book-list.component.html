@@ -1,0 +1,32 @@
+<div>
+  <div>
+    <form [formGroup]="bookForm">
+      <div class="flex-row">
+        <div class="form-group">
+          <label>Book Name</label>
+          <input formControlName="name" type="text" class="form-control">
+        </div>
+        <div>
+          <button class="btn btn-primary" (click)="addBook()">Add</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div>
+
+    <div class="mt-5">
+      <table class="table">
+        <tr>
+          <th>Title</th>
+          <th>Name</th>
+          <th>Date</th>
+        </tr>
+        <tr *ngFor="let book of books" (click)="openBook(book.id)">
+          <td>{{book?.title}}</td>
+          <td>{{book?.name}}</td>
+          <td>{{book?.createdAt | date : 'medium'}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

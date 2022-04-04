@@ -1,0 +1,25 @@
+@import "colors";
+@import "custom";
+@import "utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: $light-color;
+  font-family: $font-stack;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+

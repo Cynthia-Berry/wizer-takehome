@@ -1,0 +1,30 @@
+<div>
+  <div>
+    <form [formGroup]="categoryForm">
+      <div class="flex-row">
+        <div class="form-group">
+          <label>Category Name</label>
+          <input formControlName="name" type="text" class="form-control">
+        </div>
+        <div>
+          <button class="btn btn-primary" (click)="addCategory()">Add</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div>
+
+    <div class="mt-5">
+      <table class="table">
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+        </tr>
+        <tr *ngFor="let category of categories" (click)="openCategory(category.id)">
+          <td>{{category?.name}}</td>
+          <td>{{category?.createdAt | date : 'medium'}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

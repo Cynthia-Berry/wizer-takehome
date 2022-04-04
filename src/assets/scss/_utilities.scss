@@ -1,0 +1,98 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$container-max-widths: (
+  xs: 500px,
+  sm: 690px,
+  md: 880px,
+  lg: 910px,
+  xl: 1200px,
+  xxl: 1320px
+);
+$spaceAmount: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+//SET MARGIN AND PADDING CLASS
+@each $space in from 0 t0 5 {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+  .mx-#{$space} {
+    margin: 0 #{$space}rem;
+  }
+  .mr-#{$space} {
+    margin-right: #{$space}rem;
+  }
+  .ml-#{$space} {
+    margin-left: #{$space}rem;
+  }
+  .mt-#{$space} {
+    margin-top: #{$space}rem;
+  }
+  .mb-#{$space} {
+    margin-bottom: #{$space}rem;
+  }
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
+  .px-#{$space} {
+    padding: 0 #{$space}rem;
+  }
+  .pr-#{$space} {
+    padding-right: #{$space}rem;
+  }
+  .pl-#{$space} {
+    padding-left: #{$space}rem;
+  }
+  .pt-#{$space} {
+    padding-top: #{$space}rem;
+  }
+  .pb-#{$space} {
+    padding-bottom: #{$space}rem;
+  }
+}
+
+
+//WIDTH
+@mixin flex_percentage($className) {
+  @for $space from 1 through 50 {
+    @if ($space % 5 != 0) {
+      .#{$className}-#{$space} {
+        width: $space * 1% !important;
+      }
+    }
+  }
+}
+
+@include flex_percentage(w);
+
+//SET TEXT COLOR BASED ON BACKGROUND
+@function set-text-color($color) {
+  @if (lightness($color) > 46) {
+    @return $primary-color;
+  } @else {
+    @return $light-color;
+  }
+}
+
+//SET BACKGROUND AND TEXT COLOR
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+
+
+
+
